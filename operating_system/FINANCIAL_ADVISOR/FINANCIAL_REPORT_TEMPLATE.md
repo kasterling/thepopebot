@@ -1,96 +1,171 @@
-# Daily Financial Report — {{DATE}}
+# Daily Technical Analysis Report — {{DATE}}
 
-> Generated at {{TIME}} UTC | Pre-market briefing
-
----
-
-## 📊 Major Indices
-
-| Index | Last Close | Change | % Change |
-|-------|-----------|--------|----------|
-| S&P 500 | — | — | — |
-| Dow Jones | — | — | — |
-| Nasdaq Composite | — | — | — |
-| Russell 2000 | — | — | — |
-
-**Pre-market Futures:**
-- 
+> Generated at {{TIME}} UTC | Daily Technical Research
 
 ---
 
-## 🌍 Global Markets
+## 📊 Forex Majors and Crosses
 
-### Asia-Pacific
-- 
+### EUR/USD
+• Instrument: EUR/USD
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
 
-### Europe
-- 
+### GBP/USD
+• Instrument: GBP/USD
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
+
+### USD/JPY
+• Instrument: USD/JPY
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
+
+### AUD/USD
+• Instrument: AUD/USD
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
+
+### USD/CAD
+• Instrument: USD/CAD
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
+
+### NZD/USD
+• Instrument: NZD/USD
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
+
+### EUR/GBP
+• Instrument: EUR/GBP
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
+
+### GBP/JPY
+• Instrument: GBP/JPY
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
+
+### EUR/JPY
+• Instrument: EUR/JPY
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
+
+### AUD/JPY
+• Instrument: AUD/JPY
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
 
 ---
 
-## 📈 Bonds & Rates
+## 🥇 Precious Metals
 
-- **10-Year Treasury Yield:** —
-- **2-Year Treasury Yield:** —
-- **2s/10s Spread:** —
-- **Fed Funds Rate:** —
+### Gold (XAU/USD)
+• Instrument: XAU/USD (Gold)
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
 
----
-
-## 🛢️ Commodities
-
-| Commodity | Price | Change |
-|-----------|-------|--------|
-| WTI Crude Oil | — | — |
-| Gold | — | — |
-| Silver | — | — |
-| Natural Gas | — | — |
-
----
-
-## 💱 Currencies
-
-- **DXY (Dollar Index):** —
-- **EUR/USD:** —
-- **USD/JPY:** —
-- **GBP/USD:** —
+### Silver (XAG/USD)
+• Instrument: XAG/USD (Silver)
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
 
 ---
 
-## 📰 Key Headlines
+## 🪙 Cryptocurrency Pairs
 
-1. 
-2. 
-3. 
-4. 
-5. 
+### Bitcoin (BTC/USD)
+• Instrument: BTC/USD (Bitcoin)
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
 
----
+### Ethereum (ETH/USD)
+• Instrument: ETH/USD (Ethereum)
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
 
-## 🏭 Sector Watch
-
-- **Top Performing:** 
-- **Worst Performing:** 
-- **Notable Movers:** 
-
----
-
-## 📅 Economic Calendar (Today)
-
-| Time (ET) | Event | Consensus | Prior |
-|-----------|-------|-----------|-------|
-| — | — | — | — |
-
----
-
-## 🔍 Analysis & Outlook
-
-_Brief summary of market sentiment, key themes, and what to watch for today._
-
-
+### Solana (SOL/USD)
+• Instrument: SOL/USD (Solana)
+• Weekly Bias: [Bullish/Bearish/Neutral]
+• Daily Bias: [Bullish/Bearish/Neutral]
+• Technical Pattern: [Pattern Name]
+• Support: [Price Level]
+• Resistance: [Price Level]
+• Suggested Trade Entry Price: [Price]
+• Suggested Take Profit Price: [Price]
 
 ---
 
 ## ⚠️ Disclaimer
 
-*This report is generated by an automated AI agent for informational purposes only. It does not constitute financial advice, investment recommendations, or an offer to buy or sell any securities. Data may be delayed or inaccurate. Always consult a qualified financial advisor before making investment decisions.*
+*This report is generated by an automated AI agent for informational and educational purposes only. It does not constitute financial advice, investment recommendations, or an offer to buy or sell any securities, currencies, or cryptocurrencies. Technical analysis is subjective and may be inaccurate. Past performance does not guarantee future results. Trading involves substantial risk of loss. Always consult a qualified financial advisor and conduct your own research before making any trading decisions.*
