@@ -1,0 +1,1 @@
+Run the daily financial research task to gather the latest market data and news.
