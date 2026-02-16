@@ -1,0 +1,1 @@
+Run the Forex market, crypto, and metals analysis cron job for today's report
