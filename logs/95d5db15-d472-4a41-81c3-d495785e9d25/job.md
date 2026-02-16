@@ -1,0 +1,1 @@
+Modify the existing Forex market, crypto, and metals analysis cron job to run at 4:00 am Los Angeles time
