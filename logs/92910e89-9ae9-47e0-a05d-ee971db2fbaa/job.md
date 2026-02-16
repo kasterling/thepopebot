@@ -1,0 +1,1 @@
+Run the daily financial research Cron job now.
