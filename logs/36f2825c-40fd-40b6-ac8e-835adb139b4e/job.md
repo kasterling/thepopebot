@@ -1,0 +1,1 @@
+Provide a list of top Forex pairs to watch today, along with their current trends, support and resistance levels, and any notable economic events that may impact their prices.
