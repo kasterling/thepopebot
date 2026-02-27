@@ -1,0 +1,1 @@
+Generate the 'Sterling Intelligence Briefing'. 1. Check GBP/JPY rates and news. 2. Analyze sentiment. 3. Summarize H4 outlook based on config/STERLING_STRATEGY.md. 4. Post summary to Telegram.
