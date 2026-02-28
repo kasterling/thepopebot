@@ -1,6 +1,133 @@
-# Daily Financial Report
+# Daily Financial Report — February 16, 2026
 
-> No report has been generated yet. The first report will be created at the next scheduled run (6:00 AM Pacific, weekdays).
+> Generated at 16:23 UTC | Pre-market briefing
+
+---
+
+## ⚠️ Data Unavailable — API Rate Limit Exceeded
+
+**This report could not be generated due to Brave Search API rate limiting.**
+
+The Brave Search API (Free plan) has strict rate limits:
+- **Rate limit:** 1 request per period
+- **Current status:** Rate limit exceeded (429 errors)
+- **Quota used:** 162+ requests from daily quota of 2,000
+
+### Issue Analysis
+
+The daily financial research cron job is scheduled to run at **14:00 UTC (2 PM) Monday-Friday**. The job requires **6 separate searches** to gather comprehensive market data:
+
+1. Major indices pre-market
+2. Economic news & indicators  
+3. Treasury yields & Fed
+4. Global markets overnight
+5. Commodities & currencies
+6. Sector movers & earnings
+
+With the Free plan's rate limit of **1 request per period**, multiple consecutive searches trigger rate limiting, preventing data collection.
+
+### Recommended Solutions
+
+#### Option 1: Upgrade Brave Search API Plan
+- Consider upgrading to a paid plan with higher rate limits
+- Paid plans typically allow burst requests needed for comprehensive research
+
+#### Option 2: Adjust Search Strategy
+- Consolidate into fewer, broader search queries
+- Add longer delays between searches (may require modifying the job script)
+- Example: One comprehensive query like "stock market financial news today February 2026"
+
+#### Option 3: Alternative Data Sources
+- Add additional search providers (Google Custom Search, Bing, etc.)
+- Use financial data APIs (Alpha Vantage, Yahoo Finance, etc.)
+- Implement fallback logic when rate limits are hit
+
+#### Option 4: Adjust Cron Schedule
+- If multiple cron jobs use Brave Search, stagger their schedules
+- Ensure adequate spacing between different jobs that consume API quota
+
+---
+
+## 📊 Major Indices
+
+| Index | Last Close | Change | % Change |
+|-------|-----------|--------|----------|
+| S&P 500 | Data unavailable | — | — |
+| Dow Jones | Data unavailable | — | — |
+| Nasdaq Composite | Data unavailable | — | — |
+| Russell 2000 | Data unavailable | — | — |
+
+**Pre-market Futures:**
+- Data unavailable due to API rate limiting
+
+---
+
+## 🌍 Global Markets
+
+### Asia-Pacific
+- Data unavailable due to API rate limiting
+
+### Europe
+- Data unavailable due to API rate limiting
+
+---
+
+## 📈 Bonds & Rates
+
+- **10-Year Treasury Yield:** Data unavailable
+- **2-Year Treasury Yield:** Data unavailable
+- **2s/10s Spread:** Data unavailable
+- **Fed Funds Rate:** Data unavailable
+
+---
+
+## 🛢️ Commodities
+
+| Commodity | Price | Change |
+|-----------|-------|--------|
+| WTI Crude Oil | Data unavailable | — |
+| Gold | Data unavailable | — |
+| Silver | Data unavailable | — |
+| Natural Gas | Data unavailable | — |
+
+---
+
+## 💱 Currencies
+
+- **DXY (Dollar Index):** Data unavailable
+- **EUR/USD:** Data unavailable
+- **USD/JPY:** Data unavailable
+- **GBP/USD:** Data unavailable
+
+---
+
+## 📰 Key Headlines
+
+Data unavailable due to API rate limiting.
+
+---
+
+## 🏭 Sector Watch
+
+- **Top Performing:** Data unavailable
+- **Worst Performing:** Data unavailable
+- **Notable Movers:** Data unavailable
+
+---
+
+## 📅 Economic Calendar (Today)
+
+| Time (ET) | Event | Consensus | Prior |
+|-----------|-------|-----------|-------|
+| — | Data unavailable | — | — |
+
+---
+
+## 🔍 Analysis & Outlook
+
+**Report generation failed:** The Brave Search API rate limit was exceeded during data collection. Multiple consecutive search requests triggered HTTP 429 errors. The free tier allows only 1 request per rate limit period, which is insufficient for the 6 searches required by the daily research job.
+
+**Immediate action needed:** Review the recommended solutions above to ensure future reports can be generated successfully.
 
 ---
 
