@@ -46,5 +46,16 @@
       { "type": "http", "url": "https://example.com/hook", "method": "POST", "vars": { "source": "webhook" } }
     ],
     "enabled": false
+  },
+  {
+    "name": "send-sterling-briefing",
+    "watch_path": "/github/webhook",
+    "actions": [
+      { 
+        "type": "command", 
+        "command": "if echo '{{body}}' | jq -r '.job_results.job_description // \"\"' | grep -qi 'sterling.*briefing'; then cd event_handler && node send-sterling-briefing.js; fi"
+      }
+    ],
+    "enabled": true
   }
 ]
