@@ -1,0 +1,16 @@
+{
+  "type": "telegram_post",
+  "timestamp": "2026-03-01T20:00:00Z",
+  "subject": "Sterling Intelligence Briefing",
+  "message_file": "sterling_briefing_telegram.html",
+  "priority": "normal",
+  "auto_post": true,
+  "metadata": {
+    "pair": "GBP/JPY",
+    "timeframe": "H4",
+    "rate": 211.94,
+    "change_24h": "+0.80%",
+    "bias": "bullish",
+    "confidence": 7
+  }
+}
