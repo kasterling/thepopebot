@@ -1,0 +1,68 @@
+═══════════════════════════════════════════════════════════════
+ 📤 TELEGRAM POSTING INSTRUCTIONS
+═══════════════════════════════════════════════════════════════
+
+The Sterling Intelligence Briefing is ready to post to Telegram.
+Posting requires access to TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID.
+
+───────────────────────────────────────────────────────────────
+METHOD 1: Direct Script Execution (From Event Handler)
+───────────────────────────────────────────────────────────────
+
+If you have shell access with SECRETS loaded:
+
+  bash logs/4f8782ae-f7a2-4524-970e-5d1565192d78/post_briefing.sh
+
+───────────────────────────────────────────────────────────────
+METHOD 2: Via Webhook Trigger
+───────────────────────────────────────────────────────────────
+
+Create a job to run the posting script:
+
+curl -X POST https://your-event-handler.com/webhook \
+  -H "x-api-key: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"job": "bash logs/4f8782ae-f7a2-4524-970e-5d1565192d78/post_briefing.sh"}'
+
+───────────────────────────────────────────────────────────────
+METHOD 3: Manual Posting (If Scripts Don't Work)
+───────────────────────────────────────────────────────────────
+
+1. Copy the briefing content:
+   cat logs/4f8782ae-f7a2-4524-970e-5d1565192d78/sterling_briefing.md
+
+2. Post manually to your Telegram channel/chat
+
+───────────────────────────────────────────────────────────────
+METHOD 4: Automate With Cron (Recommended)
+───────────────────────────────────────────────────────────────
+
+Add to operating_system/CRONS.json to automate future briefings:
+
+{
+  "name": "sterling-briefing",
+  "schedule": "0 */4 * * *",
+  "type": "agent",
+  "job": "Generate the Sterling Intelligence Briefing. Check GBP/JPY rates and news. Analyze sentiment. Summarize H4 outlook based on config/STERLING_STRATEGY.md. After generating the briefing, execute the posting script at logs/*/post_briefing.sh to send it to Telegram.",
+  "enabled": true
+}
+
+This will generate and post a new briefing every 4 hours automatically.
+
+───────────────────────────────────────────────────────────────
+TROUBLESHOOTING
+───────────────────────────────────────────────────────────────
+
+If posting fails, check:
+
+1. TELEGRAM_BOT_TOKEN is set in SECRETS
+2. TELEGRAM_CHAT_ID is set in SECRETS
+3. Bot has permission to post in the target chat
+4. Event handler dependencies installed (npm install in event_handler/)
+
+To test manually:
+  export TELEGRAM_BOT_TOKEN="your-token"
+  export TELEGRAM_CHAT_ID="your-chat-id"
+  node logs/4f8782ae-f7a2-4524-970e-5d1565192d78/post_telegram.js
+
+═══════════════════════════════════════════════════════════════
