@@ -1,0 +1,39 @@
+🇬🇧 <b>Sterling Intelligence Briefing</b>
+📅 March 2, 2026 | GBP/JPY
+
+<b>Current Rate:</b> 210.08 (+0.80% 📈)
+
+<b>H4 Outlook: BULLISH RESUMPTION ✅</b>
+
+<b>Key Levels:</b>
+🔴 R: 212.00 | 214.44 | 215.00
+🟢 S: 211.11 | 209.68 | 207.62
+
+<b>Technical:</b>
+• Uptrend resumed from 207.62 support
+• RSI above 50 (strong buyer momentum)
+• Target: 212.00-214.00 zone
+• Stop: Below 211.11
+
+<b>Fundamentals:</b>
+🇬🇧 <b>BoE Dovish:</b> 70% odds of May rate cut
+• UK CPI: 1.9% (below target)
+• GDP growth: 0.0% (stagnant)
+
+🇯🇵 <b>BoJ Ultra-Dovish:</b> Patient normalization
+• Japan CPI: 1.5% (cooling)
+• New dovish board nominees
+
+<b>Sentiment:</b> 65% Bullish / 35% Bearish
+
+<b>Trade Idea:</b>
+Entry: 210.50-211.50
+Target: 214.00+
+Stop: 209.50
+R/R: 1:3+
+
+<b>Key Risk:</b> BoE cuts + global risk-off could reverse trend
+
+⚠️ <i>Not financial advice. Trade at your own risk.</i>
+
+📊 Full analysis: /logs/sterling-intelligence-briefing-2026-03-02.md
