@@ -1,0 +1,31 @@
+📊 STERLING INTELLIGENCE BRIEFING
+🗓 March 2, 2026 | 08:00 UTC
+
+💱 GBP/JPY: 210.35-210.40
+📈 Daily Range: 209.00 - 210.40
+📉 Change: ~Flat (filled bearish gap)
+
+⚡️ KEY DRIVERS:
+• 🇯🇵 JPY Weakness: Tokyo CPI below BoJ 2% target
+• 🇬🇧 BoE Dovish: Bailey signals "scope for rate cuts"
+• ⚠️ Middle East tensions support safe-haven JPY
+• 🏛 Japan PM cautious on further rate hikes
+
+📊 H4 OUTLOOK: Bearish-Leaning
+
+Technical: Clean bearish structure, resistance at 210.40
+Fundamental: Mixed - JPY weakness vs BoE dovishness
+
+🎯 SCENARIOS:
+• 🐻 Bear Case (Favored): Reject 210.40 → Target 209.00-207.50
+• 🦘 Range Case: Consolidate 209.00-210.50
+• 🐂 Bull Case (Low Prob): Break 210.50 → Target 212.36
+
+💡 STRATEGY: Favor selling rallies 210.30-210.50 with stops above 211.00. Or wait for clearer setup.
+
+⚠️ RISK: Geopolitical volatility elevated. Size positions conservatively.
+
+📋 Full briefing: /logs/sterling-intelligence-briefing-2026-03-02.md
+
+---
+Not investment advice. Trading carries significant risk.
