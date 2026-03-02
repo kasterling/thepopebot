@@ -1,0 +1,50 @@
+📊 STERLING INTELLIGENCE BRIEFING
+🗓 March 2, 2026 | 12:00 UTC
+
+💱 GBP/JPY: 210.35-210.40
+📈 Session: 209.00 - 210.40
+📉 Change: Flat (filled bearish gap, +140 pips from low)
+
+⚡️ KEY DRIVERS:
+• 🇯🇵 JPY Weakness: Tokyo CPI below BoJ 2% target → Near-term dovish
+• 🇯🇵 BoJ's Himino: "Gradually move to neutral with moderate rate hikes"
+• 🇬🇧 BoE Bailey: "Scope for rate cuts" → Inflation to 2% target
+• 🇬🇧 BoE rates held at 3.75% (last meeting)
+• ⚠️ Middle East tensions elevate safe-haven JPY demand
+• 🏛 Japan PM Takaichi cautious on rate hikes
+
+📊 H4 OUTLOOK: Neutral-to-Bullish Consolidation
+
+Technical: Range 209.00-210.50, risk on upside as long as 207.20 holds
+Fundamental: JPY weakness vs BoE dovishness = balanced forces
+
+🎯 SCENARIOS:
+• 🦘 Range (45%): Consolidate 209.00-210.50 → Fade extremes
+• 🐂 Bull (35%): Break 210.50 → Target 212.10, then 214.98
+• 🐻 Bear (20%): Break 209.00 → Target 207.20, then 206.00
+
+📊 KEY LEVELS:
+Resistance: 214.98 | 212.10 | 210.96 | 210.40-210.50
+Pivot: 210.38
+Support: 209.92 | 209.00 | 207.20
+
+💡 STRATEGY: Wait for clarity OR trade range extremes with tight stops
+
+For Bulls: Buy dips 209.20-209.50, stop below 208.80, target 210.96/212.10
+For Bears: Sell rallies 210.40-210.50, stop above 211.00, target 209.00/207.20
+
+⚠️ RISK: Reduce size 30-50%. Geopolitical volatility elevated. Mixed signals = low conviction environment.
+
+📅 THIS WEEK:
+Mon 18:30 GMT - UK Consumer Credit + Manufacturing PMI (Medium)
+Tue 00:00 GMT - US ISM Manufacturing (High)
+
+🎯 WATCH FOR:
+✅ Break above 212.10 → Bullish continuation
+❌ Break below 209.00 → Bearish reversal
+⚠️ Middle East news → Safe-haven flows
+
+📋 Full analysis: /job/tmp/sterling-briefing-latest.md
+
+---
+⚠️ Not investment advice. Trading carries significant risk. Use proper risk management.
