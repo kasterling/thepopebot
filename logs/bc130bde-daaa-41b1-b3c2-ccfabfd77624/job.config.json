@@ -1,0 +1,4 @@
+{
+  "title": "Evening Routine for Sterling Trade Management and Reporting",
+  "job": "Execute evening Sterling Trade Management routine. 1. Review all open positions and current market prices. 2. Calculate if stops should be moved to breakeven (1:1 achieved). 3. Check currency strength divergence status for active trades. 4. Update trading journal with today's activity. 5. Set alerts for tomorrow's potential setups. 6. Post daily P&L summary to Telegram."
+}
