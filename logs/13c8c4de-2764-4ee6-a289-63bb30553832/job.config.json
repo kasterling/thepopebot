@@ -1,0 +1,4 @@
+{
+  "title": "Check and Schedule 'Morning Briefing' Job in CRONS.json",
+  "job": "Read the config/CRONS.json file to identify if there is a 'Morning Briefing' job scheduled. If it's not present, create an entry for a 'Morning Briefing' job to provide daily updates on current events at a specific time each day."
+}
