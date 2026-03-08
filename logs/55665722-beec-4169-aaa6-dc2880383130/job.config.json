@@ -1,0 +1,4 @@
+{
+  "title": "Analyze YouTube Video Transcript and Generate Detailed Summary Report",
+  "job": "Fetch the transcript from the YouTube video at https://youtu.be/QF7SREoOHP4?si=ESsBYI-EGKacS4Za. Read and analyze the content thoroughly. Provide a detailed summary of what the video covers, key takeaways, main arguments or concepts presented, and your assessment of the video's quality and value. Save the analysis as a markdown report to `docs/video-analysis-QF7SREoOHP4.md`."
+}
