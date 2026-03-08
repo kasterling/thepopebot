@@ -1,0 +1,111 @@
+[
+  {
+    "name": "on-github-event",
+    "watch_path": "/github/webhook",
+    "actions": [
+      {
+        "type": "command",
+        "command": "echo 'github webhook fired'"
+      }
+    ],
+    "enabled": false
+  },
+  {
+    "name": "on-webhook-log",
+    "watch_path": "/webhook",
+    "actions": [
+      {
+        "type": "command",
+        "command": "echo 'webhook received: {{body}}'"
+      }
+    ],
+    "enabled": false
+  },
+  {
+    "name": "review-github-event",
+    "watch_path": "/github/webhook",
+    "actions": [
+      {
+        "type": "agent",
+        "job": "A GitHub event occurred. Review the payload and summarize what happened:\n{{body}}"
+      }
+    ],
+    "enabled": false
+  },
+  {
+    "name": "react-to-webhook",
+    "watch_path": "/webhook",
+    "actions": [
+      {
+        "type": "agent",
+        "job": "A webhook was received. Analyze the payload and decide if any action is needed:\n{{body}}"
+      }
+    ],
+    "enabled": false
+  },
+  {
+    "name": "forward-github",
+    "watch_path": "/github/webhook",
+    "actions": [
+      {
+        "type": "webhook",
+        "url": "https://example.com/hook",
+        "method": "POST",
+        "vars": {
+          "source": "github"
+        }
+      }
+    ],
+    "enabled": false
+  },
+  {
+    "name": "forward-webhook",
+    "watch_path": "/webhook",
+    "actions": [
+      {
+        "type": "webhook",
+        "url": "https://example.com/hook",
+        "method": "POST",
+        "vars": {
+          "source": "webhook"
+        }
+      }
+    ],
+    "enabled": false
+  },
+  {
+    "name": "review-with-openai",
+    "watch_path": "/github/webhook",
+    "actions": [
+      {
+        "type": "agent",
+        "job": "Review the GitHub event and summarize what happened:\n{{body}}",
+        "llm_provider": "openai",
+        "llm_model": "gpt-4o"
+      }
+    ],
+    "enabled": false
+  },
+  {
+    "name": "sterling-signals-tradingview",
+    "watch_path": "/tradingview",
+    "actions": [
+      {
+        "type": "agent",
+        "job": "A TradingView alert was received for {{body.ticker}}. Analysis the current market state using your tools and the strategy at config/STERLING_STRATEGY.md. If it's a high-probability setup, post a signal to Telegram. Context: {{body}}"
+      }
+    ],
+    "enabled": true
+  },
+  {
+    "name": "ingest-url",
+    "watch_path": "/ingest",
+    "actions": [
+      {
+        "type": "agent",
+        "job": "Ingest the following URL into the knowledge vault.\n\nURL: {{body.url}}\nTags: {{body.tags}}\n\n1. Detect the URL type and fetch content using the appropriate tool:\n   - YouTube (youtube.com/watch or youtu.be): `node .pi/skills/youtube-transcript/index.js <url>`\n   - Google Doc (docs.google.com): use `gdcli` to read the document\n   - Regular webpage: `node .pi/skills/browser-tools/browser-content.js <url>`\n2. Extract: title, main content, and key facts or takeaways.\n3. Create `vault/knowledge/YYYY-MM-DD-<slug>.md` with YAML frontmatter (url, title, date, tags, source_type: webpage|youtube|google-doc).\n4. If it's a Google Doc that looks like a Fathom meeting summary (contains 'Action Items' or 'Key Decisions' sections), run the full meeting pipeline instead: create `vault/meetings/YYYY-MM-DD-<slug>.md`, update attendee contact profiles in `vault/contacts/`, and send Telegram with action item checklist.\n5. Run `OBSIDIAN_VAULT_PATH=/job/vault node .pi/skills/obsidian/embed.js` to update the vector index.\n6. Send Telegram confirmation: \"✅ Saved: [title] → vault/knowledge/...\""
+      }
+    ],
+    "enabled": true
+  }
+]

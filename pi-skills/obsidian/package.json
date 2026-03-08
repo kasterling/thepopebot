@@ -1,0 +1,8 @@
+{
+	"name": "obsidian",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "Read, write, and search notes in an Obsidian vault for persistent agent memory",
+	"author": "Keith Sterling",
+	"license": "MIT"
+}

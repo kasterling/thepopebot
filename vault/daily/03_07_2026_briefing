@@ -1,0 +1,12 @@
+| SYMBOL | GARETH BIAS | FOREXANALYTIX BIAS | GREGA BIAS | JASON BIAS | ENTRY PRICE | TAKE PROFIT | STOP LOSS | SUPPORT | RESISTANCE | DAY/SWING |
+|--------|-------------|--------------------|------------|------------|-------------|-------------|-----------|---------|------------|-----------|
+| XAUUSD |     LONG    |      NEUTRAL       |    LONG    |    LONG    |    $5,000   |    $5,300   |   $4,940  |  $5,000 |   $5,158   |    BOTH   |
+| EURUSD | N/A         |       SHORT        |    SHORT   |    SHORT   |    1.1770   |    1.1580   |   1.1820  | 1.1500  |   1.1770   |    BOTH   |
+| GBPUSD | N/A         |       SHORT        |    N/A     |    SHORT   |    1.3350   |    1.3131   |   1.3450  | 1.3131  |   1.3420   |   SWING   |
+| XAGUSD | LONG        |        N/A         |    N/A     |  NEUTRAL   |    81.75    |    92.45    |   76.80   | 70.50   |   92.45    |   SWING   |
+| BTCUSD | LONG        |      NEUTRAL       |    N/A     |    N/A     |   $64,000   |   $84,000   |  $61,500  | $64,000 |  $85,000   |    BOTH   |
+| USDJPY | N/A         |       SHORT        |    LONG    |    N/A     |    155.25   |    148.00   |   156.50  | 148.00  |   155.25   |   SWING   |
+| EURCHF | N/A         |        N/A         |    LONG    |    N/A     |    0.9276   |    0.9450   |   0.9180  | 0.9180  |   0.9305   |   SWING   |
+| SOLUSD | LONG        |        N/A         |    N/A     |    N/A     |   $180.00   |   $260.00   |  $165.00  | $180.00 |    ATH     |   SWING   |
+| AUDUSD | N/A         |       LONG         |    N/A     |    N/A     |    0.6950   |    0.7150   |   0.6880  | 0.6950  |   0.7100   |    DAY    |
+| NZDUSD | N/A         |       SHORT        |    N/A     |    N/A     |    0.5960   |    0.5785   |   0.6020  | 0.5785  |   0.5965   |   SWING   |

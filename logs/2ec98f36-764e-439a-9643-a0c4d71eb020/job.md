@@ -1,1 +1,0 @@
-Save the provided list of questions to a file that can be accessed from a phone. The file should be in a format that is easily readable on mobile devices (e.g., PDF or plain text).

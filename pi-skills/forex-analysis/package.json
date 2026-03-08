@@ -1,0 +1,7 @@
+{
+  "name": "forex-analysis",
+  "version": "1.0.0",
+  "description": "Forex market data and analysis tools for the Sterling trading agent",
+  "type": "module",
+  "scripts": {}
+}

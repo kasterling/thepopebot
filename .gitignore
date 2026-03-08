@@ -1,6 +1,5 @@
 # Credentials - NEVER commit these
-auth.json
-secrets.json
+
 .env
 .env.local
 *.pem
@@ -11,11 +10,17 @@ secrets.json
 # Pi system prompt (generated at runtime from SOUL.md)
 .pi/SYSTEM.md
 
-# Pi skills symlinked at runtime from /pi-skills in Docker
-.pi/skills/brave-search
+# Pi skills dependencies (installed at runtime in Docker for correct arch)
+pi-skills/*/node_modules/
 
 # Node
 node_modules/
+
+# Next.js
+.next/
+.next-new/
+.next-old/
+out/
 
 # OS files
 .DS_Store
@@ -34,3 +39,6 @@ Thumbs.db
 tmp/
 temp/
 .tmp/
+
+# Data (SQLite memory, etc.)
+data/

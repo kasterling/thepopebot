@@ -1,1 +1,0 @@
-Execute the daily financial research routine focusing on corn market analysis, including current prices, futures trends, supply/demand factors, weather impacts, and relevant market news that could affect corn commodity trading.

@@ -1,1 +1,0 @@
-Read the file `docs/antigravity-research.md` and output its full contents.
