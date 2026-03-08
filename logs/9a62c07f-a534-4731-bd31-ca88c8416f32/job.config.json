@@ -1,0 +1,5 @@
+{
+  "job": "Quick token length check (no values exposed).\n\n1. Check TELEGRAM_BOT_TOKEN length in bash:\n```bash\necho \"TG_TOKEN_LEN=${#TELEGRAM_BOT_TOKEN}\"\n```\n\n2. Check in Node.js:\n```bash\nnode -e \"console.log('node_TG_LEN=' + (process.env.TELEGRAM_BOT_TOKEN||'').length)\"\n```\n\n3. Check first 5 chars of token:\n```bash\necho \"TG_START=${TELEGRAM_BOT_TOKEN:0:5}\"\n```\n\nReport the exact output.",
+  "llm_provider": "custom",
+  "llm_model": "gpt-4o-mini"
+}
