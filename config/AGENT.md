@@ -31,4 +31,35 @@ So you can assume that:
 
 Scripts in `/job/tmp/` can use `__dirname`-relative paths (e.g., `../docs/data.json`) to reference repo files, because they're inside the repo tree. The `.gitignore` excludes `tmp/` so nothing in this directory gets committed.
 
+---
+
+## 3. Mandatory: Send Results to Telegram When Done
+
+**Every job must send its results directly to Telegram as its final step.** Do not rely on the PR/notification pipeline — deliver results yourself.
+
+You have `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` available as environment variables. Use curl to send the message:
+
+```bash
+send_telegram() {
+  local message="$1"
+  curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+    -d chat_id="${TELEGRAM_CHAT_ID}" \
+    -d parse_mode="Markdown" \
+    --data-urlencode text="${message}" > /dev/null
+}
+```
+
+**What to send:** A concise summary of what you did and the key results. Include:
+- What the job accomplished
+- Key findings, outputs, or decisions
+- File paths for anything saved (e.g. `vault/knowledge/2026-03-08-article.md`)
+- Any action items or follow-ups needed
+
+**Formatting tips:**
+- Use Markdown (bold with `*`, code with backtick)
+- Keep it under ~3000 characters — Telegram truncates beyond that
+- If results are long, summarize and mention where the full output was saved
+
+**If the job fails:** Still send a Telegram message explaining what went wrong.
+
 Current datetime: {{datetime}}
