@@ -19,6 +19,7 @@ jobs:
           sparse-checkout: |
             package-lock.json
             logs/*/job.config.json
+            logs/*/job.md
           sparse-checkout-cone-mode: false
 
       - name: Get thepopebot version
@@ -36,6 +37,21 @@ jobs:
           if [ -f "$CONFIG_FILE" ]; then
             echo "llm_provider=$(jq -r '.llm_provider // empty' "$CONFIG_FILE")" >> $GITHUB_OUTPUT
             echo "llm_model=$(jq -r '.llm_model // empty' "$CONFIG_FILE")" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create job.md from job.config.json
+        run: |
+          JOB_ID="${{ github.ref_name }}"
+          JOB_ID="${JOB_ID#job/}"
+          CONFIG_FILE="logs/${JOB_ID}/job.config.json"
+          JOB_MD="logs/${JOB_ID}/job.md"
+          if [ -f "$CONFIG_FILE" ] && [ ! -f "$JOB_MD" ]; then
+            jq -r '.job' "$CONFIG_FILE" > "$JOB_MD"
+            git config user.email "bot@thepopebot.com"
+            git config user.name "thepopebot"
+            git add "$JOB_MD"
+            git commit -m "Add job.md for container"
+            git push
           fi
 
       - name: Login to GHCR
