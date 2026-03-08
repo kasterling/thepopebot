@@ -1,0 +1,5 @@
+{
+  "job": "Debug Telegram token availability.\n\n1. Run: `echo TELEGRAM_BOT_TOKEN=\"${TELEGRAM_BOT_TOKEN}\" TELEGRAM_CHAT_ID=\"${TELEGRAM_CHAT_ID}\"`\n2. Run: `echo FIRST_FIVE=\"${TELEGRAM_BOT_TOKEN:0:5}\"`\n3. Run: `printenv | grep TELEGRAM`\n4. Run: `/job/.pi/skills/llm-secrets/llm-secrets.js`\n5. Then try sending a Telegram message using the token shown in step 1.\n\nReport exactly what was shown for each step.",
+  "llm_provider": "custom",
+  "llm_model": "gpt-4o-mini"
+}
