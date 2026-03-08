@@ -1,0 +1,5 @@
+{
+  "job": "Network connectivity test for Telegram.\n\n1. Check DNS resolution:\n```bash\ncurl -sk --max-time 5 https://api.telegram.org/ | head -c 100\n```\n\n2. Check if the bot API base responds:\n```bash\ncurl -sk --max-time 5 -o /dev/null -w '%{http_code}' https://api.telegram.org/\n```\n\n3. Try getMe with the token (just check HTTP status code):\n```bash\ncurl -sk --max-time 5 -o /dev/null -w '%{http_code}' \"https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getMe\"\n```\n\n4. Check via Python:\n```bash\npython3 -c \"import urllib.request; r = urllib.request.urlopen('https://api.telegram.org/'); print('status:', r.status)\"\n```\n\nReport all outputs.",
+  "llm_provider": "custom",
+  "llm_model": "gpt-4o-mini"
+}
