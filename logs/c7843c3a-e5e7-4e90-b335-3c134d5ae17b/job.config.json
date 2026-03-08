@@ -1,0 +1,5 @@
+{
+  "job": "Test Telegram using Node.js (no bash curl).\n\n1. First, test via simple bash GET URL (to check if TELEGRAM_BOT_TOKEN is in bash env):\n```bash\ncurl -sk \"https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getMe\" | head -c 100\n```\n\n2. Then send via Node.js one-liner:\n```bash\nnode -e \"\nconst https = require('https');\nconst token = process.env.TELEGRAM_BOT_TOKEN;\nconst chatId = process.env.TELEGRAM_CHAT_ID;\nconst text = 'Agent test: Node.js Telegram works!';\nconst body = JSON.stringify({ chat_id: chatId, text, parse_mode: 'Markdown' });\nconst req = https.request({ hostname: 'api.telegram.org', path: '/bot' + token + '/sendMessage', method: 'POST', headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) } }, res => { let d=''; res.on('data', c => d+=c); res.on('end', () => console.log(d)); });\nreq.on('error', e => console.error(e.message));\nreq.write(body);\nreq.end();\n\"\n```\n\n3. Report the exact output from both steps.",
+  "llm_provider": "custom",
+  "llm_model": "gpt-4o-mini"
+}
