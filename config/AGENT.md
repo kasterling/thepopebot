@@ -37,17 +37,42 @@ Scripts in `/job/tmp/` can use `__dirname`-relative paths (e.g., `../docs/data.j
 
 **Every job must send its results directly to Telegram as its final step.** Do not rely on the PR/notification pipeline — deliver results yourself.
 
-You have `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` available as environment variables. Use curl to send the message:
+You have `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` available as environment variables. Use this Node.js approach to send messages (more reliable than curl in the container):
 
 ```bash
-send_telegram() {
-  local message="$1"
-  curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-    -d chat_id="${TELEGRAM_CHAT_ID}" \
-    -d parse_mode="Markdown" \
-    --data-urlencode text="${message}" > /dev/null
-}
+node -e "
+const https = require('https');
+const token = process.env.TELEGRAM_BOT_TOKEN;
+const chatId = process.env.TELEGRAM_CHAT_ID;
+const text = process.argv[1];
+const body = JSON.stringify({ chat_id: chatId, text: text, parse_mode: 'Markdown' });
+const req = https.request({ hostname: 'api.telegram.org', path: '/bot' + token + '/sendMessage', method: 'POST', headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) } }, res => { let d=''; res.on('data', c => d+=c); res.on('end', () => console.log(d)); });
+req.on('error', e => console.error(e));
+req.write(body);
+req.end();
+" "Your message here"
 ```
+
+**Or write a temp script for longer messages:**
+
+```javascript
+// /job/tmp/send-telegram.js
+const https = require('https');
+const token = process.env.TELEGRAM_BOT_TOKEN;
+const chatId = process.env.TELEGRAM_CHAT_ID;
+const text = process.argv[2];
+const body = JSON.stringify({ chat_id: chatId, text, parse_mode: 'Markdown' });
+const req = https.request({
+  hostname: 'api.telegram.org',
+  path: '/bot' + token + '/sendMessage',
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) }
+}, res => { let d = ''; res.on('data', c => d += c); res.on('end', () => console.log(d)); });
+req.on('error', e => console.error(e.message));
+req.write(body);
+req.end();
+```
+Then run: `node /job/tmp/send-telegram.js "Your message"`
 
 **What to send:** A concise summary of what you did and the key results. Include:
 - What the job accomplished
