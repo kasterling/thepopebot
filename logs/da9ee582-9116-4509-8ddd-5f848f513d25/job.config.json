@@ -1,0 +1,4 @@
+{
+  "title": "Fetch YouTube transcript and analyze system prompt best practices",
+  "job": "Fetch the transcript from the YouTube video at https://youtu.be/QZnY5-NZTes?si=NEVbkbY9lV-uoUx0. Analyze the content thoroughly and summarize whether and how the information is helpful for creating effective system prompts. Focus on key techniques, best practices, examples, and actionable insights. Save findings as a markdown report to `docs/system-prompt-research.md`."
+}
