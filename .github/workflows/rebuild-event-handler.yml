@@ -83,6 +83,13 @@ jobs:
             echo "Rebuild complete, reloading Next.js..."
             npx pm2 reload all
 
+            # Ensure llm-proxy is running
+            pm2 describe llm-proxy > /dev/null 2>&1 || \
+              pm2 start /app/scripts/llm-proxy.js \
+                --name llm-proxy \
+                --interpreter node \
+                --interpreter-args "--env-file=/app/.env"
+
             rm -rf .next-old
           '
 
@@ -116,6 +123,13 @@ jobs:
             mv .next-new .next
 
             npx pm2 restart all
+
+            # Ensure llm-proxy is running
+            pm2 describe llm-proxy > /dev/null 2>&1 || \
+              pm2 start /app/scripts/llm-proxy.js \
+                --name llm-proxy \
+                --interpreter node \
+                --interpreter-args "--env-file=/app/.env"
 
             rm -rf .next-old
           '
