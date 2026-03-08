@@ -59,6 +59,11 @@ jobs:
             IMAGE="${JOB_IMAGE_URL}:latest"
           else
             IMAGE="stephengpope/thepopebot:job-${THEPOPEBOT_VERSION}"
+            # Fall back to latest stable if versioned image not yet published
+            if ! docker manifest inspect "$IMAGE" > /dev/null 2>&1; then
+              echo "Image $IMAGE not found, falling back to :latest"
+              IMAGE="stephengpope/thepopebot:latest"
+            fi
           fi
           echo "Using image: $IMAGE"
 
