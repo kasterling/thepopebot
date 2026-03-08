@@ -1,0 +1,4 @@
+{
+  "title": "Financial Psychology Analysis Agent for YouTube Video Transcripts",
+  "job": "Fetch the transcript from the YouTube video at https://youtu.be/BVk2VBggxe4?si=e9OaSWW4t-hk7E3Y. Extract and analyze all content related to financial psychology, including mindset shifts, behavioral patterns, money beliefs, psychological barriers, and practical strategies for improving financial thinking. Summarize the key insights, lessons, and actionable techniques from the video. Save the findings as a comprehensive markdown report to `docs/financial-psychology-insights.md`."
+}
