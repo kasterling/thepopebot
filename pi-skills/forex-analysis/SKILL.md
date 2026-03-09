@@ -20,12 +20,12 @@ This skill provides Forex market data and analysis capabilities for the Sterling
 ### Get Exchange Rates
 
 ```bash
-{baseDir}/forex-rates.sh <pair1> <pair2> ...
+/job/.pi/skills/forex-analysis/forex-rates.sh <pair1> <pair2> ...
 ```
 
 Example:
 ```bash
-{baseDir}/forex-rates.sh GBP/JPY EUR/USD USD/JPY
+/job/.pi/skills/forex-analysis/forex-rates.sh GBP/JPY EUR/USD USD/JPY
 ```
 
 Output: JSON with current bid/ask prices and daily change
@@ -33,7 +33,7 @@ Output: JSON with current bid/ask prices and daily change
 ### Get Currency Strength
 
 ```bash
-{baseDir}/currency-strength.sh
+/job/.pi/skills/forex-analysis/currency-strength.sh
 ```
 
 Output: JSON with strength scores for all major currencies (0-10 scale)
@@ -41,12 +41,12 @@ Output: JSON with strength scores for all major currencies (0-10 scale)
 ### Analyze Pair
 
 ```bash
-{baseDir}/analyze-pair.sh <pair> <timeframe>
+/job/.pi/skills/forex-analysis/analyze-pair.sh <pair> <timeframe>
 ```
 
 Example:
 ```bash
-{baseDir}/analyze-pair.sh GBP/JPY 4H
+/job/.pi/skills/forex-analysis/analyze-pair.sh GBP/JPY 4H
 ```
 
 Output: Technical analysis including trend, EMA alignment, support/resistance levels

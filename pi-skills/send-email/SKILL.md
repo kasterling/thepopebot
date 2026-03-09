@@ -16,11 +16,11 @@ This skill allows PopeBot to send emails for reports, alerts, and summaries usin
 ## Usage
 
 ```bash
-{baseDir}/send.sh <to> <subject> <body>
+/job/.pi/skills/send-email/send.sh <to> <subject> <body>
 ```
 
 ### Example
 
 ```bash
-{baseDir}/send.sh "user@example.com" "Hello" "This is a message from your PopeBot."
+/job/.pi/skills/send-email/send.sh "user@example.com" "Hello" "This is a message from your PopeBot."
 ```

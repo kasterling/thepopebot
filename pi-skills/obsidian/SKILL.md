@@ -25,47 +25,47 @@ mkdir -p vault
 
 ### Read a note
 ```bash
-{baseDir}/read.js "folder/note-title"     # Read by path (no .md extension needed)
-{baseDir}/read.js "note-title"            # Search root of vault
+/job/.pi/skills/obsidian/read.js "folder/note-title"     # Read by path (no .md extension needed)
+/job/.pi/skills/obsidian/read.js "note-title"            # Search root of vault
 ```
 
 ### Write / create a note
 ```bash
-{baseDir}/write.js "folder/note-title" "# Note Title\n\nContent here."
-{baseDir}/write.js "folder/note-title" --file /tmp/content.md    # From file
+/job/.pi/skills/obsidian/write.js "folder/note-title" "# Note Title\n\nContent here."
+/job/.pi/skills/obsidian/write.js "folder/note-title" --file /tmp/content.md    # From file
 ```
 
 ### Append to a note
 ```bash
-{baseDir}/append.js "folder/note-title" "New content to add."
-{baseDir}/append.js "daily/2026-03-06" "## Evening Update\n\nMarket closed flat."
+/job/.pi/skills/obsidian/append.js "folder/note-title" "New content to add."
+/job/.pi/skills/obsidian/append.js "daily/2026-03-06" "## Evening Update\n\nMarket closed flat."
 ```
 
 ### Search notes (text)
 ```bash
-{baseDir}/search.js "query"              # Search titles and content
-{baseDir}/search.js "query" --title      # Search titles only
-{baseDir}/search.js "query" -n 10        # More results (default: 5)
+/job/.pi/skills/obsidian/search.js "query"              # Search titles and content
+/job/.pi/skills/obsidian/search.js "query" --title      # Search titles only
+/job/.pi/skills/obsidian/search.js "query" -n 10        # More results (default: 5)
 ```
 
 ### Semantic search (vector similarity)
 ```bash
-{baseDir}/semantic-search.js "query"          # Find conceptually related notes
-{baseDir}/semantic-search.js "query" --top 10 # More results (default: 5)
+/job/.pi/skills/obsidian/semantic-search.js "query"          # Find conceptually related notes
+/job/.pi/skills/obsidian/semantic-search.js "query" --top 10 # More results (default: 5)
 ```
 Uses OpenAI `text-embedding-3-small`. Run `embed.js` first to build the index.
 
 ### Build / update embeddings index
 ```bash
-{baseDir}/embed.js          # Re-embed only changed notes
-{baseDir}/embed.js --force  # Re-embed all notes
+/job/.pi/skills/obsidian/embed.js          # Re-embed only changed notes
+/job/.pi/skills/obsidian/embed.js --force  # Re-embed all notes
 ```
 
 ### List notes
 ```bash
-{baseDir}/list.js                        # List all notes
-{baseDir}/list.js "folder"              # List notes in a folder
-{baseDir}/list.js --recent 7             # Notes modified in last 7 days
+/job/.pi/skills/obsidian/list.js                        # List all notes
+/job/.pi/skills/obsidian/list.js "folder"              # List notes in a folder
+/job/.pi/skills/obsidian/list.js --recent 7             # Notes modified in last 7 days
 ```
 
 ## Output Format

@@ -26,7 +26,7 @@ If not set, guide the user through setup:
 ## Usage
 
 ```bash
-{baseDir}/transcribe.sh <audio-file>
+/job/.pi/skills/transcribe/transcribe.sh <audio-file>
 ```
 
 ## Supported Formats

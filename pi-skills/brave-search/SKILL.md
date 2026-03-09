@@ -20,7 +20,7 @@ Requires a Brave Search API account with a free subscription. A credit card is r
    ```
 5. Install dependencies (run once):
    ```bash
-   cd {baseDir}
+   cd /job/.pi/skills/brave-search
    npm install
    ```
 
