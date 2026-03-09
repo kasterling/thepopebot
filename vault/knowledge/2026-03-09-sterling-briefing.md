@@ -1,37 +1,41 @@
 ---
-Title: Sterling Intelligence Briefing
-Date: 2026-03-09
-Tags: [forex, briefing, sterling-strategy]
+title: Sterling Intelligence Briefing
+date: 2026-03-09
+tags: [forex, briefing, sterling-strategy]
 ---
 
 ## Live Rates
-| Pair     | Rate        |
-|----------|-------------|
-| GBP/JPY  | 211.0050    |
-| EUR/USD  | 1.1529      |
-| USD/JPY  | 158.4710    |
-| GBP/USD  | 1.3316      |
-| EUR/GBP  | 0.86        |
+| Currency Pair | Rate |
+|---------------|------|
+| GBP/JPY | 211.696 |
+| EUR/USD | 1.1579 |
+| USD/JPY | 158.312 |
+| GBP/USD | 1.3373 |
+| EUR/GBP | 0.8657 |
 
 ## Currency Strength Assessment
-Based on the latest analyses and rates:
-- **Strongest Currency**: USD
-- **Weakest Currency**: JPY
+**Ranked from Strongest to Weakest:**
+1. USD  
+2. GBP  
+3. JPY  
+4. EUR
 
 ## Top Setups
-1. **GBP/JPY** – *Bullish* – Possible upward movements due to strong support at 207.20; key level to watch at 214.98.
-2. **EUR/USD** – *Bullish* – Strengthening as market sentiment shifts; look for a breakout above 1.1550.
-3. **EUR/GBP** – *Bearish* – Weakening seen; potential drop towards 0.85.
+1. **GBP/JPY**: Bullish - Observing a potential for a bullish continuation as we see a rebound from 207.20, eyes on levels around 214.98.
+2. **GBP/USD**: Bullish - Watch for continuation above 1.3400 marks.
 
 ## GBP/JPY Specific Analysis
-- **Current Rate**: 211.0050
+- **Rate**: 211.696  
 - **Trend**: Bullish
-- **Key S/R Levels**: Support at 207.20, Resistance at 214.98
-- **Setup Status**: Active, waiting for confirmation.
+- **Key S/R Levels**: Resistance at 214.98; Support at 207.20  
+- **Setup Status**: Currently poised for an upside breakout.
 
 ## Economic Calendar Highlights This Week
-- **March 10**: GBP – Average Earnings Index, JPY – BoJ Monetary Policy Meeting Minutes.
-- **March 11**: USD – Consumer Price Index, High Impact.
+- **Tuesday**: 
+  - GBP: GDP growth rate
+  - JPY: BoJ interest rate announcement
+- **Wednesday**: 
+  - USD: CPI data release
 
 ## Sterling Verdict
-Watch **GBP/JPY** for potential gains today; with key resistance at 214.98, bullish momentum appears likely across multiple pairs.
+*GBP/JPY shows a strong bullish setup with key levels set for a potential break. Keep an eye on high-impact economic releases, especially the CPI data from the USD, which could impact market dynamics significantly.*
