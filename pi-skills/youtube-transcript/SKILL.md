@@ -7,17 +7,10 @@ description: Fetch transcripts from YouTube videos for summarization and analysi
 
 Fetch transcripts from YouTube videos.
 
-## Setup
-
-```bash
-cd {baseDir}
-npm install
-```
-
 ## Usage
 
 ```bash
-{baseDir}/transcript.js <video-id-or-url>
+/job/.pi/skills/youtube-transcript/transcript.js <video-id-or-url>
 ```
 
 Accepts video ID or full URL:
