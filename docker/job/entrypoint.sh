@@ -116,6 +116,22 @@ fi
 
 pi $MODEL_FLAGS -p "$PROMPT" --session-dir "${LOG_DIR}"
 
+# Send job artifacts to Telegram
+if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ] && \
+   [ -f "/job/.pi/skills/telegram-send/send-document.js" ]; then
+    ARTIFACTS=$(git diff --name-only 2>/dev/null; git ls-files --others --exclude-standard 2>/dev/null)
+    for f in $ARTIFACTS; do
+        [ -f "/job/$f" ] || continue
+        [[ "$f" == *.jsonl ]] && continue        # skip raw session logs
+        [[ "$f" == tmp/* ]] && continue          # skip temp files
+        FILE_SIZE=$(stat -c%s "/job/$f" 2>/dev/null || echo 0)
+        [ "$FILE_SIZE" -gt 10485760 ] && continue  # skip files > 10MB
+        [ "$FILE_SIZE" -eq 0 ] && continue         # skip empty files
+        echo "Sending artifact: $f"
+        node /job/.pi/skills/telegram-send/send-document.js "/job/$f" "$f" || true
+    done
+fi
+
 # 2. Commit changes + logs
 git add -A
 git add -f "${LOG_DIR}"

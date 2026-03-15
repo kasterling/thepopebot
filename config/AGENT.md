@@ -37,53 +37,29 @@ Scripts in `/job/tmp/` can use `__dirname`-relative paths (e.g., `../docs/data.j
 
 **Every job must send its results directly to Telegram as its final step.** Do not rely on the PR/notification pipeline — deliver results yourself.
 
-You have `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` available as environment variables. Use this Node.js approach to send messages (more reliable than curl in the container):
+You have `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` available as environment variables.
+
+### Send a text summary
 
 ```bash
-node -e "
-const https = require('https');
-const token = process.env.TELEGRAM_BOT_TOKEN;
-const chatId = process.env.TELEGRAM_CHAT_ID;
-const text = process.argv[1];
-const body = JSON.stringify({ chat_id: chatId, text: text, parse_mode: 'Markdown' });
-const req = https.request({ hostname: 'api.telegram.org', path: '/bot' + token + '/sendMessage', method: 'POST', headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) } }, res => { let d=''; res.on('data', c => d+=c); res.on('end', () => console.log(d)); });
-req.on('error', e => console.error(e));
-req.write(body);
-req.end();
-" "Your message here"
+node /job/.pi/skills/telegram-send/send-message.js "Your summary here"
 ```
 
-**Or write a temp script for longer messages:**
+Use HTML for formatting: `<b>bold</b>`, `<code>code</code>`. Keep under ~3000 characters.
 
-```javascript
-// /job/tmp/send-telegram.js
-const https = require('https');
-const token = process.env.TELEGRAM_BOT_TOKEN;
-const chatId = process.env.TELEGRAM_CHAT_ID;
-const text = process.argv[2];
-const body = JSON.stringify({ chat_id: chatId, text, parse_mode: 'Markdown' });
-const req = https.request({
-  hostname: 'api.telegram.org',
-  path: '/bot' + token + '/sendMessage',
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) }
-}, res => { let d = ''; res.on('data', c => d += c); res.on('end', () => console.log(d)); });
-req.on('error', e => console.error(e.message));
-req.write(body);
-req.end();
+### Send a file as a document
+
+```bash
+node /job/.pi/skills/telegram-send/send-document.js "/job/vault/report.md" "vault/report.md"
 ```
-Then run: `node /job/tmp/send-telegram.js "Your message"`
 
-**What to send:** A concise summary of what you did and the key results. Include:
+Args: `<absolute-filepath> [caption]`. The entrypoint automatically sends all modified/created files after Pi finishes, but you can also send files mid-job if needed.
+
+**What to send in your summary:**
 - What the job accomplished
 - Key findings, outputs, or decisions
 - File paths for anything saved (e.g. `vault/knowledge/2026-03-08-article.md`)
 - Any action items or follow-ups needed
-
-**Formatting tips:**
-- Use Markdown (bold with `*`, code with backtick)
-- Keep it under ~3000 characters — Telegram truncates beyond that
-- If results are long, summarize and mention where the full output was saved
 
 **If the job fails:** Still send a Telegram message explaining what went wrong.
 

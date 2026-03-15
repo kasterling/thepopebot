@@ -1,0 +1,7 @@
+{
+  "name": "telegram-send",
+  "version": "1.0.0",
+  "description": "Send files and messages to Telegram",
+  "scripts": {},
+  "dependencies": {}
+}
