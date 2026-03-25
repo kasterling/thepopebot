@@ -1,0 +1,1 @@
+https://localhost/?code=VALID_AUTHORIZATION_CODE
