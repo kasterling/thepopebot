@@ -1,12 +1,5 @@
 [
   {
-    "name": "morning-analyst-briefing",
-    "schedule": "0 14 * * 1-5",
-    "type": "command",
-    "enabled": false,
-    "command": "node morning-briefing.js"
-  },
-  {
     "name": "vault-embed-index",
     "schedule": "0 15 * * 1-5",
     "type": "command",
