@@ -1,0 +1,18 @@
+# Value Area + ATR Trading Strategy Requirements
+
+# Core dependencies
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Optional: For advanced backtesting and visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Optional: For live trading integrations
+# ccxt>=4.0.0  # Cryptocurrency exchanges
+# alpaca-trade-api>=3.0.0  # Stock trading
+# python-binance>=1.0.0  # Binance integration
+
+# Optional: For data acquisition
+# yfinance>=0.2.0  # Yahoo Finance data
+# alpha_vantage>=2.3.0  # Alpha Vantage API
